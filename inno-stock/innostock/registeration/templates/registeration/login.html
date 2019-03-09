@@ -1,0 +1,98 @@
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+  <!--<head>-->
+
+    <!--<meta charset="utf-8">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+
+    <!--<title>Innostock</title>-->
+  <!--</head>-->
+  <!--<body>-->
+  <!--<h1>{{ message }}</h1>-->
+    <!--<form method="POST" action="{% url 'login' %}">-->
+        <!--{% csrf_token %}-->
+
+        <!--<label>Email</label>-->
+
+        <!--<input name="email" type="email"/>-->
+        <!--<br>-->
+        <!--<label>Password</label>-->
+
+        <!--<input type="password" name="password"/>-->
+        <!--<br>-->
+        <!--<input type="submit" name="submit"/>-->
+    <!--</form>-->
+    <!--<a href="{% url 'register' %}">Sign-up</a>-->
+  <!---->
+
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
+  <!--</body>-->
+<!--</html>-->
+
+
+
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Incognito">
+        <meta name="description" content="Stylized Login and Signup Form">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load staticfiles %}
+        <link rel="stylesheet"  href="{% static 'css/styles.css' %}">
+    </head>
+    <body style= "background-color:#038FCC;">
+        <div class="wrapper">
+            {{ message }}
+            <div class="form">
+                <section class="form-header">
+                    <button id="btn-login" class="btn-login">Login</button>
+                    <button id="btn-signup" class="btn-signup">Sign Up</button>
+                </section>
+
+
+                <section id="form-body" class="form-body">
+                    <form method="POST" action="{% url 'login' %}">
+                        {% csrf_token %}
+                        <section id="login-container" class="login-container">
+                        <section class="logo-container">
+                            <aside class="logo"></aside>
+                        </section>
+                        <p class="login-title">Account Login</p>
+                        <input type="email" name="email" placeholder="Email" />
+                        <input type="password" name="password" placeholder="Password" />
+                        <button class="btn-submit" type="submit" name="submit">Submit</button>
+                        </section>
+                    </form>
+                    <form method="POST" action="{% url 'register'  %}">
+                        {% csrf_token %}
+                    <section id="signup-container" class="signup-container">
+                        <section class="logo-container">
+                            <aside class="logo"></aside>
+                        </section>
+
+                        <p class="signup-title">Register Account</p>
+
+                        <input type="text" name="first_name" class="txtbox-firstname" placeholder="First Name" />
+                        <input type="text" name="last_name" class="txtbox-lastname" placeholder="Last Name" />
+                        <input type="email" name="email" placeholder="Email" />
+                        <input type="password" name="password" placeholder="Password" />
+                        <!--<input type="password" placeholder="Repeat Password" />-->
+                        <input type="text" name="contact_number" placeholder="Contact No." />
+                        <button class="btn-register" type="submit" name="submit">Register</button>
+                    </section>
+                    </form>
+                </section>
+
+           </div>
+           <br>
+        </div>
+    </body>
+
+    <script type="text/javascript" src="{% static 'js/register.js' %}"></script>
+</html>

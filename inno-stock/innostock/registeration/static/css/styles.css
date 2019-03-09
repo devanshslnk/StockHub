@@ -1,0 +1,185 @@
+
+*{
+   margin: 0; padding: 0; /* Remove margins and paddings on elements */
+   box-sizing: border-box; /* Generate paddings inside elements */
+   -webkit-user-select: none; /* Chrome, Safari, Android and iOS */
+      -moz-user-select: none; /* Firefox */
+       -ms-user-select: none; /* Internet Explorer */
+           user-select: none; /* Disables text selection */
+}
+body {
+   font: 1em Arial;
+   background-color: #038FCC;
+   background: url(../images/blue_wallpaper.jpg) no-repeat center center fixed;
+}
+input {
+   position: relative; /* Element will be relatively positioned on its parent */
+   height: 35px; width:50%;
+   margin: 10px auto; padding: 5px 15px;
+   border: 1px solid #BBB; border-radius: 4px;
+   font: 0.8em Arial;
+   color: #000;
+   background: #FFF;
+   display: block; /* Input always start on new line */
+   transition: all 150ms linear;
+   align-self: center;
+   min-width: 130px;
+   max-width: 400px;
+}
+input:focus {
+   outline: none;
+   border-color: Steelblue ;
+   box-shadow: 0 0 0 4px Lightsteelblue;
+}
+button {
+   position: relative;
+   height: 35px;
+   left: 0; right: 0; /* Both left and right set to 0 to horizontally center element */
+   margin: 0 auto; padding: 5px 10px; /* Margin's horizontal position set to 0 to center element */
+   border: 0;
+   font: 0.8em Arial;
+   transition: all 150ms linear; /* Put animation on the button */
+   cursor: pointer; /* Changes the cursor into a pointing hand on PCs  */
+   -webkit-tap-highlight-color: transparent; /* Removes the blue highlight when button tapped on mobile */
+}
+button:focus {
+   outline: none;
+}
+.wrapper {
+   padding-top: 10%;
+   position: absolute;
+   height: 100vh; width: 100vw;
+   top: 0; left: 0; /* Making sure that the wrapper will not create unusual space by default */
+   overflow: auto; /* Auto show scroll bar if the content overflows */
+}
+.form {
+   position: relative;
+   width: 50%;
+   left: 0; right: 0;
+   margin: 20px auto;
+   background: #CCC;
+   box-shadow: 1px 1px 5px 0 #777;
+   min-width: 300px;
+   max-width: 600px;
+}
+.btn-login {
+   color: #777;
+   background: #EEE;
+}
+.btn-login:hover {
+   background: #DDD;
+}
+.btn-signup {
+   color: #FFF;
+   background: #038FCC;
+}
+.btn-signup:hover {
+   background: #DDD;
+   color: #000;
+}
+.btn-login, .btn-signup {
+   width: 50%;
+   text-transform: uppercase; /* Transforms texts into uppercase */
+   display: inline-block; /* Used to inline block elements */
+}
+.btn-signup {
+   float: right; /* Makes element float/move to right */
+}
+.form-body {
+   position: relative;
+   max-height: 600px;
+
+   padding: 0 40px;
+   background: #EEE;
+   transition: max-height 500ms linear;
+   overflow: hidden;
+}
+.login-container {
+   position: relative;
+}
+.logo-container {
+   position: relative;
+   height: 80px; width: 80px;
+   left: 0; right: 0;
+   margin: 15px auto 10px auto;
+   border-radius: 50%;
+   background: #038FCC;
+   box-shadow: 0 0 5px 0 #555;
+   cursor: pointer;
+   -webkit-tap-highlight-color: transparent;
+}
+.logo {
+   position: absolute;
+   height: 15px; width: 30px;
+   top: 50%; left: 0; right: 0;
+   margin: 0 auto;
+   border-radius: 15px 15px 2px 2px;
+   background: #EEE;
+}
+.logo:before {
+   position: absolute;
+   content: '';
+   height: 15px; width: 15px;
+   top: -18px; left: 0; right: 0;
+   margin: 0 auto;
+   border-radius: 50%;
+   background: #EEE;
+}
+.login-title, .signup-title {
+   position: relative;
+   margin: 20px 0;
+   font: 1.2em Arial;
+   color: #777;
+   text-align: center;
+   text-transform: uppercase;
+}
+.signup-title {
+   color: #777;
+}
+.btn-submit {
+   width: 100%;
+   margin: 10px 0 20px 0;
+   color: #FFF;
+   border-radius: 4px;
+   background: mediumseagreen;
+}
+.btn-submit:hover {
+   background: #C33C3C;
+}
+.signup-container {
+   position: relative;
+   display: none;
+   background: #EEE;
+}
+.signup-container .logo-container {
+   background: #EEE;
+}
+.signup-container .logo, .signup-container .logo:before {
+   background: #038FCC;
+}
+.txtbox-firstname {
+   float: left;
+}
+.txtbox-lastname {
+   float: right;
+}
+.txtbox-firstname, .txtbox-lastname {
+   width: 49%;
+}
+.signup-container input {
+   background: #EEE;
+}
+.signup-container input:focus {
+   box-shadow: none;
+}
+.btn-register {
+   width: 100%;
+   margin: 10px 0 30px 0;
+   color: #EEE;
+   border-radius: 4px;
+   background: Mediumseagreen;
+}
+.hide {
+   max-height: 0;
+}
+
