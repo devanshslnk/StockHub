@@ -4,6 +4,7 @@ import html5lib
 from pprint import pprint
 import csv
 
+
 def crawler_code(url_extension,received_time,writefile):
     #fetching url
     base_url="https://www.bseindia.com/corporates/"
