@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -26,7 +27,6 @@ SECRET_KEY = ')#f9=m9eyf3&o^-v0l_mnlzbugoyz(hsszz#6@-*kzy9b)3y26'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -131,6 +131,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 #account changes
+
 ACCOUNT_USER_MODEL_USERNAME_FIELD = 'username'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
